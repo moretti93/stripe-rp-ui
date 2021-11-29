@@ -2,4 +2,4 @@
 
 Библиотека находится в разработке
 
-[Documentation](https://moretti93.github.io/stripe-rp-ui/){:target="_blank" rel="noopener"}
+<a href="https://moretti93.github.io/stripe-rp-ui/" target="_blank">Documentation</a>
