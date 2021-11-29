@@ -2,4 +2,4 @@
 
 Библиотека находится в разработке
 
-URL: https://moretti93.github.io/stripe-rp-ui/
+[Documentation](https://moretti93.github.io/stripe-rp-ui/)
