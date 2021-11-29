@@ -1,0 +1,117 @@
+@import "../common";
+@plugin '../plugins/palette';
+
+.st-btn {
+    appearance: none;
+    border-radius: @border-radius-base;
+    border: none;
+    padding: 0 @padding-height-base;
+    font-family: @font-family;
+    cursor: pointer;
+    position: relative;
+    transition: 0.3s;
+    color: @text-color-base;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.st-btn:not(.st-btn-outline) {
+    background: @item-color-base;
+
+    &:hover {
+        background: @item-color-hover;
+    }
+    &:disabled {
+        background: @item-color-disabled;
+    }
+}
+
+.st-btn.st-btn-outline {
+    background: none;
+    border: @item-color-base 1px solid;
+    &:hover {
+        border-color: @item-color-hover;
+    }
+    &:disabled {
+        border-color: @item-color-disabled;
+    }
+}
+
+.st-btn:disabled {
+    cursor: not-allowed;
+    color: @text-color-disabled;
+}
+
+.st-btn.st-btn-loading {
+    cursor: default;
+}
+
+.st-btn-md {
+    height: @height-base;
+    font-size: @font-base;
+}
+
+.st-btn-sm {
+    height: @height-small;
+    font-size: @font-small;
+}
+
+.st-btn-lg {
+    height: @height-large;
+    font-size: @font-large;
+}
+
+.st-btn-block {
+    width: 100%;
+}
+
+.st-btn .ripples {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    pointer-events: none;
+}
+
+.st-btn .ripples span {
+    transform: scale(0);
+    border-radius: 100%;
+    position: absolute;
+    opacity: 0.75;
+    animation-name: ripple;
+    background-color: @item-color-base;
+}
+
+@keyframes ripple {
+    to {
+        opacity: 0;
+        transform: scale(2);
+    }
+}
+
+each(@colors, {
+    .st-btn-@{key} {
+        &:not(.st-btn-outline) {
+            background-color: @value;
+        }
+        &:not(.st-btn-outline):hover {
+            background-color: palette(@value, 400);
+        }
+        &:not(.st-btn-outline):disabled {
+            background-color: fade(palette(@value, 600), 70%);
+        }
+        &.st-btn-outline {
+            border-color: @value
+        }
+        &.st-btn-outline:hover {
+            border-color: palette(@value, 300);
+        }
+        &.st-btn-outline:disabled {
+            border-color: fade(palette(@value, 600), 70%);
+        }
+        .ripples span {
+            background-color: palette(@value, 600);
+        }
+    }
+})

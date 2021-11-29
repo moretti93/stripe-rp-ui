@@ -1,0 +1,288 @@
+@font-face {
+  font-family: 'SF Pro Display';
+  font-style: normal;
+  font-weight: 400;
+  src: local('SF Pro Display'), url('https://fonts.cdnfonts.com/s/59278/SFPRODISPLAYREGULAR.woff') format('woff');
+}
+@font-face {
+  font-family: 'SF Pro Display';
+  font-style: italic;
+  font-weight: 100;
+  src: local('SF Pro Display'), url('https://fonts.cdnfonts.com/s/59278/SFPRODISPLAYULTRALIGHTITALIC.woff') format('woff');
+}
+@font-face {
+  font-family: 'SF Pro Display';
+  font-style: italic;
+  font-weight: 200;
+  src: local('SF Pro Display'), url('https://fonts.cdnfonts.com/s/59278/SFPRODISPLAYTHINITALIC.woff') format('woff');
+}
+@font-face {
+  font-family: 'SF Pro Display';
+  font-style: italic;
+  font-weight: 300;
+  src: local('SF Pro Display'), url('https://fonts.cdnfonts.com/s/59278/SFPRODISPLAYLIGHTITALIC.woff') format('woff');
+}
+@font-face {
+  font-family: 'SF Pro Display';
+  font-style: normal;
+  font-weight: 500;
+  src: local('SF Pro Display'), url('https://fonts.cdnfonts.com/s/59278/SFPRODISPLAYMEDIUM.woff') format('woff');
+}
+@font-face {
+  font-family: 'SF Pro Display';
+  font-style: italic;
+  font-weight: 600;
+  src: local('SF Pro Display'), url('https://fonts.cdnfonts.com/s/59278/SFPRODISPLAYSEMIBOLDITALIC.woff') format('woff');
+}
+@font-face {
+  font-family: 'SF Pro Display';
+  font-style: normal;
+  font-weight: 700;
+  src: local('SF Pro Display'), url('https://fonts.cdnfonts.com/s/59278/SFPRODISPLAYBOLD.woff') format('woff');
+}
+@font-face {
+  font-family: 'SF Pro Display';
+  font-style: italic;
+  font-weight: 800;
+  src: local('SF Pro Display'), url('https://fonts.cdnfonts.com/s/59278/SFPRODISPLAYHEAVYITALIC.woff') format('woff');
+}
+@font-face {
+  font-family: 'SF Pro Display';
+  font-style: italic;
+  font-weight: 900;
+  src: local('SF Pro Display'), url('https://fonts.cdnfonts.com/s/59278/SFPRODISPLAYBLACKITALIC.woff') format('woff');
+}
+.st-btn {
+  appearance: none;
+  border-radius: 6px;
+  border: none;
+  padding: 0 12px;
+  font-family: 'SF Pro Display', sans-serif;
+  cursor: pointer;
+  position: relative;
+  transition: 0.3s;
+  color: #fff;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.st-btn:not(.st-btn-outline) {
+  background: #383838;
+}
+.st-btn:not(.st-btn-outline):hover {
+  background: #444444;
+}
+.st-btn:not(.st-btn-outline):disabled {
+  background: #2f2f2f;
+}
+.st-btn.st-btn-outline {
+  background: none;
+  border: #383838 1px solid;
+}
+.st-btn.st-btn-outline:hover {
+  border-color: #444444;
+}
+.st-btn.st-btn-outline:disabled {
+  border-color: #2f2f2f;
+}
+.st-btn:disabled {
+  cursor: not-allowed;
+  color: #bab9b9;
+}
+.st-btn.st-btn-loading {
+  cursor: default;
+}
+.st-btn-md {
+  height: 40px;
+  font-size: 14px;
+}
+.st-btn-sm {
+  height: 36px;
+  font-size: 12px;
+}
+.st-btn-lg {
+  height: 46px;
+  font-size: 16px;
+}
+.st-btn-block {
+  width: 100%;
+}
+.st-btn .ripples {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  pointer-events: none;
+}
+.st-btn .ripples span {
+  transform: scale(0);
+  border-radius: 100%;
+  position: absolute;
+  opacity: 0.75;
+  animation-name: ripple;
+  background-color: #383838;
+}
+@keyframes ripple {
+  to {
+    opacity: 0;
+    transform: scale(2);
+  }
+}
+.st-btn-red:not(.st-btn-outline) {
+  background-color: #f04f43;
+}
+.st-btn-red:not(.st-btn-outline):hover {
+  background-color: #f26a63;
+}
+.st-btn-red:not(.st-btn-outline):disabled {
+  background-color: rgba(230, 63, 48, 0.7);
+}
+.st-btn-red.st-btn-outline {
+  border-color: #f04f43;
+}
+.st-btn-red.st-btn-outline:hover {
+  border-color: #f58884;
+}
+.st-btn-red.st-btn-outline:disabled {
+  border-color: rgba(230, 63, 48, 0.7);
+}
+.st-btn-red .ripples span {
+  background-color: #e63f30;
+}
+.st-btn-orange:not(.st-btn-outline) {
+  background-color: #ff9800;
+}
+.st-btn-orange:not(.st-btn-outline):hover {
+  background-color: #ffa930;
+}
+.st-btn-orange:not(.st-btn-outline):disabled {
+  background-color: rgba(245, 151, 0, 0.7);
+}
+.st-btn-orange.st-btn-outline {
+  border-color: #ff9800;
+}
+.st-btn-orange.st-btn-outline:hover {
+  border-color: #ffba61;
+}
+.st-btn-orange.st-btn-outline:disabled {
+  border-color: rgba(245, 151, 0, 0.7);
+}
+.st-btn-orange .ripples span {
+  background-color: #f59700;
+}
+.st-btn-yellow:not(.st-btn-outline) {
+  background-color: #ffc757;
+}
+.st-btn-yellow:not(.st-btn-outline):hover {
+  background-color: #ffcf75;
+}
+.st-btn-yellow:not(.st-btn-outline):disabled {
+  background-color: rgba(245, 187, 61, 0.7);
+}
+.st-btn-yellow.st-btn-outline {
+  border-color: #ffc757;
+}
+.st-btn-yellow.st-btn-outline:hover {
+  border-color: #ffd894;
+}
+.st-btn-yellow.st-btn-outline:disabled {
+  border-color: rgba(245, 187, 61, 0.7);
+}
+.st-btn-yellow .ripples span {
+  background-color: #f5bb3d;
+}
+.st-btn-green:not(.st-btn-outline) {
+  background-color: #58b15b;
+}
+.st-btn-green:not(.st-btn-outline):hover {
+  background-color: #71bf72;
+}
+.st-btn-green:not(.st-btn-outline):disabled {
+  background-color: rgba(63, 171, 69, 0.7);
+}
+.st-btn-green.st-btn-outline {
+  border-color: #58b15b;
+}
+.st-btn-green.st-btn-outline:hover {
+  border-color: #8ccf8c;
+}
+.st-btn-green.st-btn-outline:disabled {
+  border-color: rgba(63, 171, 69, 0.7);
+}
+.st-btn-green .ripples span {
+  background-color: #3fab45;
+}
+.st-btn-cyan:not(.st-btn-outline) {
+  background-color: #00bcd4;
+}
+.st-btn-cyan:not(.st-btn-outline):hover {
+  background-color: #2acadb;
+}
+.st-btn-cyan:not(.st-btn-outline):disabled {
+  background-color: rgba(0, 177, 204, 0.7);
+}
+.st-btn-cyan.st-btn-outline {
+  border-color: #00bcd4;
+}
+.st-btn-cyan.st-btn-outline:hover {
+  border-color: #57dae6;
+}
+.st-btn-cyan.st-btn-outline:disabled {
+  border-color: rgba(0, 177, 204, 0.7);
+}
+.st-btn-cyan .ripples span {
+  background-color: #00b1cc;
+}
+.st-btn-blue:not(.st-btn-outline) {
+  background-color: #1499ef;
+}
+.st-btn-blue:not(.st-btn-outline):hover {
+  background-color: #3dadf2;
+}
+.st-btn-blue:not(.st-btn-outline):disabled {
+  background-color: rgba(14, 140, 230, 0.7);
+}
+.st-btn-blue.st-btn-outline {
+  border-color: #1499ef;
+}
+.st-btn-blue.st-btn-outline:hover {
+  border-color: #67c1f5;
+}
+.st-btn-blue.st-btn-outline:disabled {
+  border-color: rgba(14, 140, 230, 0.7);
+}
+.st-btn-blue .ripples span {
+  background-color: #0e8ce6;
+}
+.st-btn-violet:not(.st-btn-outline) {
+  background-color: #673ab7;
+}
+.st-btn-violet:not(.st-btn-outline):hover {
+  background-color: #805ac7;
+}
+.st-btn-violet:not(.st-btn-outline):disabled {
+  background-color: rgba(95, 43, 179, 0.7);
+}
+.st-btn-violet.st-btn-outline {
+  border-color: #673ab7;
+}
+.st-btn-violet.st-btn-outline:hover {
+  border-color: #987bd4;
+}
+.st-btn-violet.st-btn-outline:disabled {
+  border-color: rgba(95, 43, 179, 0.7);
+}
+.st-btn-violet .ripples span {
+  background-color: #5f2bb3;
+}
+body {
+  color: #fff;
+  background: #2a2a2b;
+  font-family: 'SF Pro Display', sans-serif;
+}
+*,
+:after,
+:before {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
